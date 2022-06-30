@@ -31,7 +31,7 @@ Created Database:
 $ rails db:create
 ```
 
-Added RSpec and generated inital test
+Added RSpec and generated initial test
 ```
 $ bundle add rspec-rails
 $ rails generate rspec:install
@@ -92,6 +92,38 @@ Connected GitHub Repo to local repo
 ```
 $ git remote add origin https://github.com/learn-academy-2022-charlie/cat-tinder-backend-bengal-lati.git
 $ git add .
-$ git commit -m 'Inital Commit - Backend Intro'
+$ git commit -m 'Initial Commit - Backend Intro'
 $ git push origin main
+```
+
+THE ONLY STEP
+```
+$ rails g scaffold Car name:string year:integer enjoys:text image:text
+```
+NOTE: If we use --api when creating rails app, we DO NOT NEED verify_authenticity_token
+
+```ruby
+  let(:valid_attributes) {
+    # {
+    #   name:'Dodge Dakota',
+    #   year: 2002,
+    #   enjoys: 'Back roads and mud holes',
+    #   image: 'https://live.staticflickr.com/1076/5115638748_acf542ef3e_b.jpg'
+    # }
+    {
+      "name" => "Dodge Dakota",
+      "year" => 2002, 
+      "enjoys" => "Back roads and mud holes",
+      "image" => "https://live.staticflickr.com/1076/5115638748_acf542ef3e_b.jpg"
+    }
+  }
+  
+  let(:invalid_attributes) {
+    {
+      "name" => nil,
+      "year" => nil, 
+      "enjoys" => nil,
+      "image" => nil
+    }
+  }
 ```
