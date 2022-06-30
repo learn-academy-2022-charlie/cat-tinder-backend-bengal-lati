@@ -9,7 +9,7 @@ $ rails new bengal-lati-backend -d postgresql -T --api
 ```
 $ cd bengal-lati-backend
 ```
-Uncommented ```gem 'rack-cors'``` in the Gemfile
+Uncommented ```gem 'rack-cors'``` in the Gemfile and added ``` , :require => 'rack/cors'``` to the end of the same line
 ```
 $ bundle install
 ```
@@ -18,7 +18,7 @@ Uncommented the following code in ```config/initializers/cors.rb```
 ```ruby
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "example.com"
+    origins "*"
 
     resource "*",
       headers: :any,
