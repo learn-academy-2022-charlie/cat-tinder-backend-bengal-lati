@@ -127,3 +127,7 @@ NOTE: If we use --api when creating rails app, we DO NOT NEED verify_authenticit
     }
   }
 ```
+
+## API Validations
+
+- In ```spec/models/car_spec.rb``` created tests
