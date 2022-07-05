@@ -102,7 +102,12 @@ RSpec.describe "/cars", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          "name" => "Dodge Dakota",
+          "year" => 2002, 
+          "enjoys" => "Back roads and mud holes",
+          "image" => "https://live.staticflickr.com/1076/5115638748_acf542ef3e_b.jpg"
+        }
       }
 
       it "updates the requested car" do
